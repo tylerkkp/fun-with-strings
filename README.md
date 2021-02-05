@@ -7,9 +7,13 @@ This is a small python program I wrote to get a bit more familiar with tkinter f
 * Number of characters
 * String in ALL CAPS
 
+### Example output for a non-palindrome
+
 ![screen shot][logo]
 
 [logo]: https://github.com/tylerkkp/fun-with-strings/blob/main/img/drat.png "non palindrome screen shot"
+
+### Example output for a palindrome
 
 ![screen shot][logo]
 

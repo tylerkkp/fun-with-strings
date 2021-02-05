@@ -7,3 +7,10 @@ This is a small python program I wrote to get a bit more familiar with tkinter f
 * Number of characters
 * String in ALL CAPS
 
+![screen shot][logo]
+
+[logo]: https://github.com/tylerkkp/fun-with-strings/blob/master/img/drat.png "non palindrome screen shot"
+
+![screen shot][logo]
+
+[logo]: https://github.com/tylerkkp/fun-with-strings/blob/master/img/won.png "palindrome screen shot"

@@ -29,6 +29,7 @@ desc5 = '/____//_/ /_/ |_/___/_/ |_/\____//____/  \n'
 fulldesc = desc1 + desc2 + desc3 + desc4 + desc5
 
 # Create ASCII heading and place it in the window
+# Note that we had to change font to Courier (because it's monospace)
 heading = Label(row1, text=fulldesc, font=("Courier", 16))
 heading.grid(row=0, column=0)
 

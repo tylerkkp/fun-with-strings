@@ -57,9 +57,22 @@ capitalized = StringVar()
 capitalized.set('')
 trimmed_str = StringVar()
 trimmed_str.set('')
+palindrome = StringVar()
+palindrome.set('')
+
+# Create function to test if input str is a palindrome
+def paltest(theword):
+    theword = theword.replace(" ", "")
+    baseword = theword.lower()
+    revword = baseword[::-1]
+    if baseword == revword:
+        return True
+    else:
+        return False
 
 # Get the value of the string input
 def update_fields(*args):
+    textc = ''
     the_string = str(str_val.get())
     # find number of characters in the string, stored as a str value
     new_charnum = str(len(the_string))
@@ -73,6 +86,7 @@ def update_fields(*args):
         new_uppercase   = ''
         new_capitalized = ''
         new_trimmed_str = ''
+        new_palindrome  = ''
     else:
         new_firstchar   = the_string[0]
         new_lastchar    = the_string[-1]
@@ -80,6 +94,12 @@ def update_fields(*args):
         new_uppercase   = the_string.upper()
         new_capitalized = the_string[0].upper() + the_string[1:].lower()
         new_trimmed_str = the_string.strip()
+        if paltest(the_string) == True:
+            new_palindrome = "Now I draw an award. I won!"
+            pal_result.config(fg = 'green')
+        else:
+            new_palindrome = "Drat, such custard!"
+            pal_result.config(fg = 'red')
 
     first_char_result.config(text = new_firstchar)
     last_char_result.config(text = new_lastchar)
@@ -87,6 +107,7 @@ def update_fields(*args):
     u_case_result.config(text = new_uppercase)
     capped_result.config(text = new_capitalized)
     trimmed_result.config(text = new_trimmed_str)
+    pal_result.config(text = new_palindrome)
 
 # create the widgets for the center (results) frame
 num_chars = Label(row2, text='Number of characters:') #jobname
@@ -103,6 +124,8 @@ capped = Label(row2, text='Capitalize:') # freeboard
 capped_result = Label(row2, text=capitalized.get(), width=36, borderwidth=2, relief="ridge") # freebd1
 trimmed = Label(row2, text='Without leading and trailing spaces:')
 trimmed_result = Label(row2, text=trimmed_str.get(), width=36, borderwidth=2, relief="ridge")
+pal_str = Label(row2, text='Is it a palindrome?')
+pal_result = Label(row2, text=palindrome.get(), width=36, borderwidth=2, relief="ridge")
 
 # layout the widgets in the center frame
 num_chars.grid(row=1, column=0)
@@ -117,6 +140,8 @@ u_case.grid(row=5, column=0)
 u_case_result.grid(row=5, column=1)
 trimmed.grid(row=6, column=0)
 trimmed_result.grid(row=6, column=1)
+pal_str.grid(row=7, column=0)
+pal_result.grid(row=7, column=1)
 
 # Add exit button for fun
 exitButton = Button(row3, text="Exit",command=lambda: exit())

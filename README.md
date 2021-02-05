@@ -15,9 +15,9 @@ This is a small python program I wrote to get a bit more familiar with tkinter f
 
 ### Example output for a palindrome:
 
-![screen shot][logo]
+![screen shot][logo1]
 
-[logo]: https://github.com/tylerkkp/fun-with-strings/blob/main/img/won.png "palindrome screen shot"
+[logo1]: https://github.com/tylerkkp/fun-with-strings/blob/main/img/won.png "palindrome screen shot"
 
 ### How to run it on your own machine:
 
